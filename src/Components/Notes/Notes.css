@@ -1,0 +1,57 @@
+#notes {
+	display: flex;
+}
+
+#formNote {
+	width: 25%;
+	background-color: #3a0ca3;
+	color: #4cc9f0;
+}
+
+#notesList {
+	width: 75%;
+	background-color: #4361ee;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	height: calc(100vh - 100px);
+	overflow-y: scroll;
+}
+
+.card {
+	background-color: #4cc9f0;
+	width: 15rem;
+	display: flex;
+	flex-direction: column;
+	border-radius: 30px;
+	padding: 20px;
+	margin: 20px;
+	height: 12rem;
+	cursor: pointer;
+	transition: box-shadow 0.5s;
+}
+
+.card:hover {
+	box-shadow: 10px 10px 20px #f72585;
+}
+
+.card > h3 {
+	margin: 0;
+}
+
+.card > p {
+	align-self: flex-end;
+	margin: 0;
+}
+
+.card_title {
+	height: 9rem;
+}
+
+.buttons {
+	display: flex;
+	justify-content: flex-end;
+}
+.buttons > button {
+	margin-right: 5px;
+}
