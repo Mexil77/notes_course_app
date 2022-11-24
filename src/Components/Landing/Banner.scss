@@ -1,3 +1,5 @@
+@import "Styles/Colors.scss";
+
 .Banner {
 	background-image: url("https://images.unsplash.com/photo-1517842645767-c639042777db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bm90ZXN8ZW58MHx8MHx8&w=1000&q=80");
 	background-repeat: no-repeat;
@@ -30,26 +32,26 @@
 }
 
 .btn-banner:hover {
-	box-shadow: 5px 5px 5px 1px #93a2bf;
+	box-shadow: 5px 5px 5px 1px $color-blue;
 	margin-right: 10px;
 	margin-bottom: 10px;
 }
 
 @keyframes shadowMove {
 	0% {
-		box-shadow: 10px 10px 10px 1px #93a2bf;
+		box-shadow: 10px 10px 10px 1px $color-blue;
 	}
 	25% {
-		box-shadow: -10px 10px 10px 1px #93a2bf;
+		box-shadow: -10px 10px 10px 1px $color-blue;
 	}
 	50% {
-		box-shadow: -10px -10px 10px 1px #93a2bf;
+		box-shadow: -10px -10px 10px 1px $color-blue;
 	}
 	75% {
-		box-shadow: 10px -10px 10px 1px #93a2bf;
+		box-shadow: 10px -10px 10px 1px $color-blue;
 	}
 	100% {
-		box-shadow: 10px 10px 10px 1px #93a2bf;
+		box-shadow: 10px 10px 10px 1px $color-blue;
 	}
 }
 
