@@ -1,6 +1,6 @@
 .navbar {
 	height: 50px;
-	background-color: #7209b7;
+	background-color: #b17ebf;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -15,7 +15,7 @@
 	margin-left: 30px;
 	font-size: large;
 	font-weight: bold;
-	color: #4cc9f0;
+	color: #f2f2f2;
 	cursor: pointer;
 	padding-left: 10px;
 	padding-right: 10px;
@@ -25,7 +25,7 @@
 }
 
 #logoNav:hover {
-	background-color: #f72585;
+	/* background-color: #f72585; */
 }
 
 .navbar > button {

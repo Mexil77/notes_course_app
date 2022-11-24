@@ -2,15 +2,12 @@
 	padding: 5px;
 	border: 0;
 	border-radius: 10px;
-	background-color: #7209b7;
+	background-color: #673d73;
 	font-weight: bolder;
 	font-size: medium;
 	color: #4cc9f0;
-	transition: background-color 0.5s;
-}
-
-.btn:hover {
-	background-color: #f72585;
+	transition: all 0.5s;
+	cursor: pointer;
 }
 
 .btn-primary {

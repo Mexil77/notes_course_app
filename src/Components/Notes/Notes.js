@@ -9,7 +9,7 @@ export default function Notes() {
 	const [data, setData] = useState([]);
 
 	const fetchData = async () => {
-		const res = await axios.get("https://jsonplaceholder.typicode.com/posts");
+		const res = await axios.get("http://localhost:5000/api/notes");
 		setData(res.data);
 	};
 

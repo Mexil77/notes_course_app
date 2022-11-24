@@ -10,8 +10,8 @@ export default function Banner() {
 				<div className="Banner_Box">
 					<h1>Bienvenido</h1>
 					<p>Tu app para gestionar todas tus notas</p>
-					<Link to={"/notes"}>
-						<button className="btn">Ir a notas</button>
+					<Link to={"/notes"} className="btn btn-banner">
+						Ir a notas
 					</Link>
 				</div>
 			</div>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 export default function MyForm({ data, setData }) {
 	const [title, setTitle] = useState("");
@@ -25,17 +26,23 @@ export default function MyForm({ data, setData }) {
 				/>
 				<button
 					className="btn"
-					onClick={(e) => {
+					onClick={async (e) => {
 						e.preventDefault();
-						setData([
-							...data,
-							{
-								id: data.length + 1,
-								userId: 11,
-								title,
-								body,
-							},
-						]);
+						await axios.post("http://localhost:5000/api/notes", {
+							userId: "emgarcia",
+							title,
+							body,
+						});
+						// setData([
+						// 	...data,
+						// 	{
+						// 		id: data.length + 1,
+						// 		userId: 11,
+						// 		title,
+						// 		body,
+						// 	},
+						// ]);
+
 						setTitle("");
 						setBody("");
 					}}
