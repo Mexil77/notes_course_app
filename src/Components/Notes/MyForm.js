@@ -1,55 +1,17 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React from "react";
+import { Form } from "react-router-dom";
 
-export default function MyForm({ data, setData }) {
-	const [title, setTitle] = useState("");
-	const [body, setBody] = useState("");
+export default function MyForm() {
 	return (
 		<div id="formNote">
 			<h1>Agregar Nota</h1>
-			<form action="">
-				<input
-					value={title}
-					onChange={(e) => {
-						setTitle(e.target.value);
-					}}
-					placeholder="Title"
-					type="text"
-				/>
-				<input
-					value={body}
-					onChange={(e) => {
-						setBody(e.target.value);
-					}}
-					placeholder="Description"
-					type="text"
-				/>
-				<button
-					className="btn"
-					onClick={async (e) => {
-						e.preventDefault();
-						await axios.post("http://localhost:5000/api/notes", {
-							userId: "emgarcia",
-							title,
-							body,
-						});
-						// setData([
-						// 	...data,
-						// 	{
-						// 		id: data.length + 1,
-						// 		userId: 11,
-						// 		title,
-						// 		body,
-						// 	},
-						// ]);
-
-						setTitle("");
-						setBody("");
-					}}
-				>
+			<Form method="post" action="">
+				<input placeholder="Title" type="text" name="title" />
+				<input placeholder="Description" type="text" name="body" />
+				<button type="submit" className="btn">
 					Guardar
 				</button>
-			</form>
+			</Form>
 		</div>
 	);
 }

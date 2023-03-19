@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import { useLoaderData } from "react-router-dom";
 import "./Notes.css";
 
 import NotesList from "./NotesList";
@@ -7,19 +7,15 @@ import MyForm from "./MyForm";
 
 export default function Notes() {
 	const [data, setData] = useState([]);
-
-	const fetchData = async () => {
-		const res = await axios.get("http://localhost:5000/api/notes");
-		setData(res.data);
-	};
+	const dataLoader = useLoaderData();
 
 	useEffect(() => {
-		fetchData();
-	}, []);
+		setData(dataLoader);
+	}, [dataLoader]);
 
 	return (
 		<div id="notes">
-			<MyForm data={data} setData={setData} />
+			<MyForm />
 			<NotesList data={data} />
 		</div>
 	);

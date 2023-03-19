@@ -8,7 +8,7 @@ export default function Banner() {
 		<section>
 			<div className="Banner">
 				<div className="Banner_Box">
-					<h1>Bienvenido</h1>
+					<h1 className="Banner_Box_Titulo">Bienvenido</h1>
 					<p>Tu app para gestionar todas tus notas</p>
 					<Link to={"/notes"} className="btn btn-banner">
 						Ir a notas
